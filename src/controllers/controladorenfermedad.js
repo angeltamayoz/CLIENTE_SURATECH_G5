@@ -1,0 +1,5 @@
+let nombreEnfermedad = document.getElementById("nombreenfermedad")
+let sintomasEnfermedad = document.getElementById("sintomasenfermedad")
+let clasificacionEnfermedad = document.getElementById("clasificacionenfermedad")
+let gradoenfErmedad = document.getElementById("gradoenfermedad")
+let probabilidadvidaEnfermedad = document.getElementById("probabilidadvidaenfermedad")
