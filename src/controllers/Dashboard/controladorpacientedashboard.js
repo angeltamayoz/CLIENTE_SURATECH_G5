@@ -68,6 +68,7 @@ pacientes.forEach(function(paciente){
   //6. Se crea una etiqueta para poner el nombre del paciente
   let nombre = document.createElement("h2");
   nombre.textContent = paciente.nombre;
+
   let id = document.createElement("h4");
   id.textContent = paciente.id;
 
@@ -83,8 +84,29 @@ pacientes.forEach(function(paciente){
   let telefono = document.createElement("p");
   telefono.textContent = paciente.telefono;
 
+  let ips = document.createElement("p");
+  ips.textContent = paciente.ips;
+
+  let fechaAfiliacion = document.createElement("p");
+  fechaAfiliacion.textContent = paciente.fechaAfiliacion;
+
+  let tienePoliza = document.createElement("p");
+  tienePoliza.textContent = paciente.tienePoliza;
+
+  let grupoIngresos = document.createElement("p");
+  grupoIngresos.textContent = paciente.grupoIngresos;
+
   //PASO FINAL. Ordenar cartas
   tarjeta.appendChild(nombre);
+  tarjeta.appendChild(id);
+  tarjeta.appendChild(anioNacimiento);
+  tarjeta.appendChild(ciudad);
+  tarjeta.appendChild(correo);
+  tarjeta.appendChild(telefono);
+  tarjeta.appendChild(ips);
+  tarjeta.appendChild(fechaAfiliacion);
+  tarjeta.appendChild(tienePoliza);
+  tarjeta.appendChild(grupoIngresos);
   columna.appendChild(tarjeta);
   fila.appendChild(columna);
 })
