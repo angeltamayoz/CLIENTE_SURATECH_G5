@@ -1,4 +1,4 @@
-//OBJETIVO: Recibir daros del back y hacerles render (render = intarlos)
+//OBJETIVO: Recibir datos del back y hacerles render (render = intarlos)
 //1. Simular los datos
 let pacientes = [
   {

@@ -1,5 +1,3 @@
-//OBJETIVO: Recibir daros del back y hacerles render (render = intarlos)
-//1. Simular los datos
 let medicos = [
     {
         id: 990,
@@ -42,21 +40,17 @@ let medicos = [
     }
 ];
   
-  //2. Crear una referencia a una etiqueta html donde vamos a renderizar
   let fila = document.getElementById("fila");
   
-  //3. Se recorren los datos para obtenerlos de forma separada
   medicos.forEach(function(medico){
     console.log(medico);
-    //4. Se crean columnas
+
     let columna = document.createElement("div");
     columna.classList.add("col")
   
-    //5. Se crea tarjetas
     let tarjeta = document.createElement("div");
     tarjeta.classList.add("card", "p-5", "h-100", "shadow");
   
-    //6. Se crea una etiqueta para poner el nombre del medico
     let nombre = document.createElement("h2");
     nombre.textContent = medico.nombre;
   
@@ -90,7 +84,6 @@ let medicos = [
     let disponibleFinDeSemana = document.createElement("p");
     disponibleFinDeSemana.textContent = medico.disponibleFinDeSemana;
   
-    //PASO FINAL. Ordenar cartas
     tarjeta.appendChild(nombre);
     tarjeta.appendChild(id);
     tarjeta.appendChild(matriculaProfesional);
