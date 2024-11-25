@@ -1,61 +1,15 @@
-//OBJETIVO: Recibir datos del back y hacerles render (render = intarlos)
-//1. Simular los datos
-let pacientes = [
-  {
-    id: 890,
-    nombre: "Chirstopher Andrés Gallego",
-    anioNacimiento: "2006-03-08",
-    ciudad: "Medellín",
-    correo: "chris@gmail.com",
-    telefono: "123456789",
-    ips: "Coopsana Calazans",
-    fechaAfiliacion: "2020-01-01",
-    tienePoliza: true,
-    grupoIngresos: "C"
-  },
-  {
-    id: 891,
-    nombre: "Daniela Sofía Ramírez",
-    anioNacimiento: "2005-11-15",
-    ciudad: "Bogotá",
-    correo: "daniela@example.com",
-    telefono: "987654321",
-    ips: "Sura",
-    fechaAfiliacion: "2021-06-10",
-    tienePoliza: false,
-    grupoIngresos: "B"
-  },
-  {
-    id: 892,
-    nombre: "Luis Fernando Martínez",
-    anioNacimiento: "2007-07-22",
-    ciudad: "Cali",
-    correo: "luisfm@example.com",
-    telefono: "456789123",
-    ips: "Famisanar",
-    fechaAfiliacion: "2019-09-25",
-    tienePoliza: true,
-    grupoIngresos: "A"
-  },
-  {
-    id: 893,
-    nombre: "Andrea Pilar López",
-    anioNacimiento: "2006-01-30",
-    ciudad: "Cartagena",
-    correo: "andrea_pl@example.com",
-    telefono: "321654987",
-    ips: "Nueva EPS",
-    fechaAfiliacion: "2022-03-15",
-    tienePoliza: false,
-    grupoIngresos: "C"
-  }
-];
+import {buscarPacientes} from "../../services/serviciosPaciente.js"
 
-//2. Crear una referencia a una etiqueta html donde vamos a renderizar
+//OBJETIVO: Recibir datos del back y hacerles render (render = pintarlos)
+//1. Llamar al API
+buscarPacientes()
+.then(function (respuestaBack){
+  console.log(respuestaBack);
+  //2. Crear una referencia a una etiqueta html donde vamos a renderizar
 let fila = document.getElementById("fila");
 
 //3. Se recorren los datos para obtenerlos de forma separada
-pacientes.forEach(function(paciente){
+respuestaBack.forEach(function(paciente){
   console.log(paciente);
   //4. Se crean columnas
   let columna = document.createElement("div");
@@ -110,3 +64,4 @@ pacientes.forEach(function(paciente){
   columna.appendChild(tarjeta);
   fila.appendChild(columna);
 })
+});
