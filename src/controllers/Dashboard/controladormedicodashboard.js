@@ -13,7 +13,7 @@ buscarMedico()
     columna.classList.add("col")
   
     let tarjeta = document.createElement("div");
-    tarjeta.classList.add("card", "p-5", "h-100", "shadow");
+    tarjeta.classList.add("card", "p-5", "shadow", "my-4");
   
     let nombre = document.createElement("h2");
     nombre.textContent = medico.nombre;

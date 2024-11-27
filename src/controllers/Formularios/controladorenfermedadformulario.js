@@ -1,3 +1,5 @@
+import {registrarEnfermedad} from "../../services/servicioEnfermedad.js";
+
 let nombreEnfermedad = document.getElementById("nombreenfermedad")
 let sintomasEnfermedad = document.getElementById("sintomasenfermedad")
 let clasificacionEnfermedad = document.getElementById("clasificacionenfermedad")
@@ -16,11 +18,14 @@ botonRegistroEnfermedad.addEventListener("click", function(evento){
         probabiliadVida: probabilidadvidaEnfermedad.value
         }
 
-        console.log(datosFormularioEnfermedad);
-
-        Swal.fire({
+        registrarEnfermedad(datosFormularioEnfermedad)
+        .then(function (respuestaBack) {
+          console.log(respuestaBack);
+          Swal.fire({
             title: "Registro Existoso!",
             text: "Ya eres parte de nuestra gran familia!",
             icon: "success"
           });
+        });
+        console.log(datosFormularioEnfermedad);
 })
