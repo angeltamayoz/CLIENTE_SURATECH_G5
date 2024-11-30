@@ -3,7 +3,7 @@ import {registrarMedicamento} from "../../services/servicioMedicamento.js";
 let nombreMedicamento = document.getElementById("nombremedicamento")
 let presentacionMedicamento = document.getElementById("presentacionmedicamento")
 let dosisMedicamento = document.getElementById("dosismedicamento")
-let laboratorioMedicamento = document.getElementById("laboratoriomedicamento")
+let laboratiorioMedicamento = document.getElementById("laboratoriomedicamento")
 let caducidadMedicamento = document.getElementById("caducidadmedicamento")
 let contraindicacionesMedicamento = document.getElementById("contraindicacionesmedicamento")
 let registroMedicamento = document.getElementById("registromedicamento")
@@ -17,7 +17,7 @@ botonRegistroMedicamento.addEventListener("click", function(evento){
         nombre: nombreMedicamento.value,
         presentacion: presentacionMedicamento.value,
         dosis: dosisMedicamento.value,
-        laboratiorio: laboratorioMedicamento.value,
+        laboratiorio: laboratiorioMedicamento.value,
         fechaCaducidad: caducidadMedicamento.value,
         contraIndicaciones: contraindicacionesMedicamento.value,
         registro: registroMedicamento.value,

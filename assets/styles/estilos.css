@@ -1,35 +1,167 @@
-.menu{
+.menu {
     background-color: #0033A0;
 }
 
-.banner{
-    background-image: url("../img/medicos.jpg");
-    background-position: top center;
-    background-size: cover;
-    background-attachment: fixed;
-    padding: 25%;
+/* Sección 1 - Carrusel */
+.carousel-item {
     position: relative;
-    z-index: 1;
+    height: 500px;
+    /* Altura del viewport */
+    min-height: 300px;
+    /* Altura mínima para pantallas pequeñas */
+    background-position: center;
+    background-size: cover;
 }
 
-.banner2{
-    background-image: url("../img/medicoatendiendo.jpg");
-    background-position: top center;
-    background-size: cover;
-    background-attachment: fixed;
-    padding: 25%;
-    position: relative;
-    z-index: 1;
-}
-
-.banner::after{
-    content: "";
-    position: absolute;
+.carousel-item img {
+    filter: brightness(0.5);
+    object-fit: cover;
     width: 100%;
     height: 100%;
-    background-color: black;
-    top:0;
-    left:0;
-    opacity: 0.5;
-    z-index: -1;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.carousel-caption h3 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 70vh;
+    }
+
+    .text-box h5 {
+        font-size: 30px;
+    }
+
+    .carousel-caption h3 {
+        font-size: 2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-item {
+        height: 50vh;
+    }
+
+    .text-box h5 {
+        font-size: 30px;
+    }
+
+    .carousel-caption h3 {
+        font-size: 1rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Sección 1 */
+#logoFondoIndex {
+    width: 75%;
+    height: auto;
+    /* Cambiado de 100% a auto para mantener la proporción */
+    border-radius: 50px;
+    max-width: 300px;
+    /* Añadido para limitar el tamaño en pantallas grandes */
+}
+
+.suratechTitulo {
+    color: white;
+    font-size: 2.5em;
+    /* Reducido ligeramente para mejor responsividad */
+    text-align: center;
+    background-color: #0033A0;
+    /* Cambiado a azul corporativo */
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+/* Media query adicional para .suratechTitulo */
+@media (max-width: 576px) {
+    .suratechTitulo {
+        font-size: 2em;
+        padding: 8px 15px;
+    }
+}
+
+/* Sección 2 */
+.tarjetasSec2 {
+    border-radius: 50px;
+}
+
+/* Footer */
+footer {
+    min-height: 500px;
+    background-color: #0033A0;
+}
+
+.footer-logo {
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+}
+
+.footer-texto {
+    font-size: 1.5rem;
+    padding: 20px;
+    margin-bottom: 30px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.iconos-redes-sociales a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
+}
+
+.iconos-redes-sociales i {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
+}
+
+.iconos-redes-sociales a:hover {
+    background-color: white;
+    border: 2px solid rgb(13, 110, 253);
+}
+
+.iconos-redes-sociales a:hover i {
+    color: black;
+}
+
+.derechos-de-autor {
+    font-size: 15px;
+    color: #aeaeae;
+    padding: 20px;
 }

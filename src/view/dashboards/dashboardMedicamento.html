@@ -1,34 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medicamento</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Medicamentos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../../assets/styles/estilos.css">
+    <link rel="stylesheet" href="../../../assets/styles/estilosDash.css">
 </head>
+
 <body>
     <main>
-        <section class="container my-5">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-12 col-md-9 border rounded p-5 shadow">
-                    <h4>Medicamentos: </h4>
-                    <p>Hasta la fecha la APP registra <span class="fw-bold">13</span> medicamentos</p>
-                    <i class="bi bi-capsule fs-1"></i>
-                    <i class="bi bi-activity fs-1 mx-3"></i>
-                    <i class="bi bi-hospital fs-1"></i>
+                <!-- Sidebar -->
+                <div class="col-md-2 sidebar p-3">
+                    <a class="navbar-brand center d-flex justify-content-center align-items-center" href="./index.html">
+                        <img src="../../../assets/img/logotipo.png" alt="logo" width="45" height="45">
+                        <h5 class="fw-bold text-center">Medicamentos</h5>
+                    </a>
+                    <ul class="nav flex-column mt-2">
+                        <li class="nav-item text-center rounded botonesSidebar">
+                            <a class="nav-link active" aria-current="page" href="../../../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-center" href="#"><i class="bi bi-speedometer2"></i>
+                                Dashboard</a>
+                        </li>
+                        <hr class="sidebar-divider">
+                        <li class="nav-item text-center">
+                            <p class="mt-3 fw-bold">SERVICIOS</p>
+                        </li>
+                        <li class="nav-item dropdown text-center rounded botonesSidebar">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="true"><i class="bi bi-app-indicator"></i>
+                                Gestión
+                            </a>
+                            <ul class="dropdown-menu gestion shadow">
+                                <li><a class="dropdown-item botonesSidebar text-white"
+                                        href="../paciente.html">Paciente</a>
+                                </li>
+                                <li><a class="dropdown-item botonesSidebar text-white" href="../medico.html">Médico</a>
+                                </li>
+                                <li><a class="dropdown-item botonesSidebar text-white"
+                                        href="../enfermedad.html">Enfermedad</a>
+                                </li>
+                                <li><a class="dropdown-item botonesSidebar text-white"
+                                        href="../medicamento.html">Medicamento</a></li>
+                                <li><a class="dropdown-item botonesSidebar text-white" href="../signovital.html">Signo
+                                        Vital</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown text-center rounded botonesSidebar">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="true"><i class="bi bi-card-checklist"></i>
+                                Dashboard
+                            </a>
+                            <ul class="dropdown-menu gestion shadow">
+                                <li><a class="dropdown-item botonesSidebar text-white"
+                                        href="./dashboardPaciente.html">DB -
+                                        Paciente</a></li>
+                                <li><a class="dropdown-item botonesSidebar text-white" href="./dashboardMedico.html">DB
+                                        - Médico</a></li>
+                                <li><a class="dropdown-item botonesSidebar text-white"
+                                        href="./dashboardEnfermedad.html">DB
+                                        -
+                                        Enfermedad</a></li>
+                                <li><a class="dropdown-item botonesSidebar text-white"
+                                        href="./dashboardMedicamento.html">DB
+                                        -
+                                        Medicamento</a></li>
+                                <li><a class="dropdown-item botonesSidebar text-white"
+                                        href="./dashboardSignoVital.html">DB
+                                        -
+                                        Signo Vital</a></li>
+                            </ul>
+                        </li>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-12 col-md-3">
-                    <img src="../../../assets/img/tigrelogo.png" alt="logo" class="img-fluid">
+                <div class="col-md-10">
+                    <!-- Topbar -->
+                    <nav class="navbar topbar mb-4">
+                        <div class="container-fluid">
+                            <form class="d-flex w-50">
+                                <input class="form-control me-2" type="search" placeholder="Search for..."
+                                    aria-label="Search">
+                                <button class="btn btn-primary botones" type="submit"><i
+                                        class="bi bi-search"></i></button>
+                            </form>
+                            <div class="d-flex align-items-center">
+                                <span class="me-3">Douglas McGee</span>
+                                <img src="https://via.placeholder.com/40" alt="Profile" class="rounded-circle">
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="container">
+                        <div class="row">
+                            <!-- Buscador medicamentos -->
+                            <div class="d-flex col-12 col-md-6 mb-4">
+                                <button class="btn btn-primary botones" type="submit"><i
+                                        class="bi bi-search"></i></button>
+                                <input type="text" class="form-control ms-2" placeholder="Buscar Medicamento">
+                            </div>
+                            <div class="col-3"></div>
+                            <div class="col-md-3 col-12 d-flex align-items-start justify-content-end">
+                                <button class="btn btn-primary botones btnTable" type="submit">
+                                    <i class="bi bi-table icTabla"></i>
+                                    <i class="bi bi-card-heading icTarjetas"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <hr class="sidebar-divider">
+                        <!-- Mostrar medicamentos -->
+                        <section class="container">
+                            <div class="row row-cols-1 row-cols-md-3 g-5" id="fila"></div>
+                        </section>
+                        <section class="container">
+                            <section class="container">
+                                <table id="tabla"></table>
+                            </section>
+                        </section>
+                        <!-- --------------- -->
+                    </div>
                 </div>
             </div>
-        </section>
-        <section class="container">
-            <div class="row row-cols-1 row-cols-md-3 g-5" id="fila">
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Medicamento</h1>
+                        <button type="button" class="btn-close cerrar" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary cerrar" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
     </main>
+
+    <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
+        <img class="footer-logo" src="../../../assets/img/logotipo.png" alt="Logo">
+        <p class="footer-texto text-center text-white">"Salud anticipada, bienestar asegurado." </p>
+        <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
+            <a href="https://x.com/kuprax" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-twitter"></i>
+            </a>
+            <a href="https://github.com/angeltamayoz" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/angel_tamayo_z/" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-instagram"></i>
+            </a>
+            <a href="mailto:angeltamayo@micorreo.com" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-envelope"></i>
+            </a>
+        </div>
+        <div class="derechos-de-autor text-center">
+            Creado por:
+            <div class="d-flex flex-wrap justify-content-center mt-2">
+                <span class="mx-2">Valentina Galeano</span>
+                <span class="mx-2">Angel Tamayo</span>
+                <span class="mx-2">Julieta Grisales</span>
+                <span class="mx-2">Carlos Cano</span>
+            </div>
+            <br> (2024) &#169;
+        </div>
+    </footer>
+
     <script src="../../controllers/Dashboard/controladormedicamentodashboard.js" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

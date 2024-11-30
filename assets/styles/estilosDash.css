@@ -1,0 +1,52 @@
+body {
+    background-color: #f8f9fc;
+}
+
+/* SIDEBAR */
+.sidebar {
+    background-color: #0033A0;
+    min-height: 100vh;
+    color: white;
+}
+.sidebar .nav-link {
+    color: white;
+}
+.sidebar .nav-link.active {
+    color: white;
+}
+
+.botonesSidebar:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Añade una transición de color y sombra */
+}
+
+.gestion {
+    background-color: #0541c2;
+}
+
+.gestion li a {
+    background-color: #0541c2 !important;
+    margin-top: 3px;
+}
+
+
+/* TOPBAR */
+.topbar {
+    background-color: white;
+    border-bottom: 1px solid #e3e6f0;
+}
+
+/* MAIN */
+.botones {
+    border-radius: 50%;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#tabla {
+    display: none;
+}
+
+.icTarjetas {
+    display: none;
+}

@@ -12,10 +12,13 @@
 </head>
 
 <body>
+  <!-- Navbar -->
   <header>
     <nav class="navbar navbar-expand-lg menu navbar-dark fixed-top">
       <div class="container-fluid">
-        <img src="./assets/img/logotipo.png" alt="logo" width="45" height="45">
+        <a class="navbar-brand" href="./index.html">
+          <img src="./assets/img/logotipo.png" alt="logo" width="45" height="45">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -23,189 +26,391 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active mx-2" aria-current="page" href="#">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
-                Dropdown
+                Dashboard
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./src/view/dashboards/dashboardPaciente.html">DB - Paciente</a></li>
+                <li><a class="dropdown-item" href="./src/view/dashboards/dashboardMedico.html">DB - Médico</a></li>
+                <li><a class="dropdown-item" href="./src/view/dashboards/dashboardEnfermedad.html">DB - Enfermedad</a></li>
+                <li><a class="dropdown-item" href="./src/view/dashboards/dashboardMedicamento.html">DB - Medicamento</a></li>
+                <li><a class="dropdown-item" href="./src/view/dashboards/dashboardSignoVital.html">DB - Signo Vital</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Gestión
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="./src/view/paciente.html">Paciente</a></li>
-                <li><a class="dropdown-item" href="./src/view/medico.html">Medico</a></li>
+                <li><a class="dropdown-item" href="./src/view/medico.html">Médico</a></li>
                 <li><a class="dropdown-item" href="./src/view/enfermedad.html">Enfermedad</a></li>
                 <li><a class="dropdown-item" href="./src/view/medicamento.html">Medicamento</a></li>
                 <li><a class="dropdown-item" href="./src/view/signovital.html">Signo Vital</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              <a class="nav-link" href="#formPaciente">Registro</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
         </div>
       </div>
     </nav>
   </header>
   <main>
-    <section class="banner text-white">
-      <h3>SURATECH2</h3>
-      <p>Atrevete a gestionar y controlar tus signos vitales</p>
-      <a href="#textomuestra" class="btn btn-primary">Ver más</a>
-    </section>
-    <section class="container my-5">
-      <div class="row">
-        <div class="col-6">
-          <img src="./assets/img/tigre.png" alt="tigre" class="img-fluid">
+    <!-- Carrusel -->
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active carrusel">
+          <img src="../../../assets/img/medicoIndex1.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-block">
+            <div class="text-box">
+              <h4 style="font-size: 40px;">SURATECH </h4>
+              <p style="font-size: 20px;">"Salud anticipada, bienestar asegurado."</p>
+            </div>
+            <a href="#seccion2" class="btn btn-primary my-5">Ver mas</a>
+          </div>
         </div>
-        <div class="col-6 align-self-center text-center">
-          <h3>SURATECH2</h3>
-          <hr>
-          <p id="textomuestra">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque ex consequatur nobis ab, quaerat, error
-            reprehenderit quo aliquam officiis reiciendis explicabo ea quidem fugiat, in voluptatem est voluptates earum
-            tempora.
-          </p>
-          <button class="btn btn-outline-primary">
-            Ver reportes
-          </button>
+        <div class="carousel-item carrusel">
+          <img src="../../../assets/img/medicoIndex2.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-block">
+            <div class="text-box">
+              <h5 style="font-size: 40px;">SIEMPRE PENDIENTES DE TI</h5>
+              <p style="font-size: 20px;">Estos son nuestros profesionales que están siempres pendientes de nuestra GRAN
+                FAMILIA.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item carrusel">
+          <img src="../../../assets/img/medicoIndex3.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-block">
+            <div class="text-box">
+              <h5 style="font-size: 30px;">¡¡¡ATREVETE A FORMAR PARTE DE NUESTRA FAMILIA!!!</h5>
+              <p style="font-size: 20px;">Unete para poder mejorar tu bienestar y tu salud.</p>
+            </div>
+            <a href="../paciente.html" class="btn btn-primary my-3">REGISTRATE</a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- Sección 1 -->
+    <section class="container my-5" id="seccion1">
+      <div class="row">
+        <div class="col-md-7 col-12">
+          <h1 class="text-center suratechTitulo">SURATECH</h1>
+          <p class="lead text-center my-5" style="font-size: 20px;">Suratech es una innovadora aplicación diseñada para
+            que los pacientes puedan registrar fácilmente sus signos vitales, como presión arterial, frecuencia cardíaca
+            y temperatura. Este proceso permite a los profesionales de la salud detectar posibles enfermedades de manera
+            más rápida y eficiente, mejorando el cuidado y la prevención. Con Suratech, estamos transformando la
+            atención médica hacia un modelo más proactivo y accesible</p>
+        </div>
+        <div class="col-md-5 col-12 d-flex justify-content-center align-items-center">
+          <img src="./assets/img/logoConFondo.jpg" class="img-fluid" alt="logoFondo" id="logoFondoIndex"
+            style="max-width: 500px;">
         </div>
       </div>
     </section>
+    <!-- Tarjetas sección 2 -->
+    <section class="bg-primary text-white py-5 border m-5 shadow tarjetasSec2" id="seccion2">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <h2>Conoce como mejorar tu salud a través de <span class="fw-bold">SURATECH</span></h2>
+            <p>Te entregamos contenidos y experiencias para cuidar tu salud y la de tu familia</p>
+          </div>
+          <div class="col-lg-8">
+            <div class="row">
+              <div class="col-md-4 mb-4">
+                <div class="card border-0 shadow">
+                  <img src="./assets/img/pacienteIndex1.jpg" class="card-img-top" alt="suratech">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">¡Puedes registrarte ahora!</h5>
+                    <p class="card-text">Registrate ahora y sé parte de nuestra ¡¡GRAN FAMILIA!!.</p>
+                    <a href="#formPaciente" class="text-primary fw-bold">IR →</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="card border-0 shadow">
+                  <img src="./assets/img/medicoAtendiendoIndex.avif" class="card-img-top" alt="Especialistas">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Especialistas</h5>
+                    <p class="card-text">Conoce todos los especialistas que nos ayudan a todos en el cuidado de nuestra
+                      salud.</p>
+                    <a href="./src/view/dashboards/dashboardMedico.html" class="text-primary fw-bold">IR →</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="card border-0 shadow">
+                  <img src="./assets/img/SuraIndex.png" class="card-img-top" alt="SURA">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">SURA</h5>
+                    <p class="card-text">Hazte afiliado AHORA MISMO para recibir el resto de nuestros beneficios.</p>
+                    <a href="https://www.epssura.com/" class="text-primary fw-bold">IR →</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Sección 3 -->
     <section class="container my-5">
-
-      <!-- Formluario -->
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-12 mb-4">
+          <div class="card shadow-sm border">
+            <div class="card-body text-center">
+              <i class="bi bi-people-fill fs-3 text-primary"></i>
+              <h5 class="card-title mt-3">Pacientes</h5>
+              <p class="card-text">Aquí puedes ver todos nuestros pacientes</p>
+              <a href="./src/view/dashboards/dashboardPaciente.html" class="btn btn-primary">IR →</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-12 mb-4">
+          <div class="card shadow-sm border">
+            <div class="card-body text-center">
+              <i class="bi bi-bandaid-fill fs-3 text-primary"></i>
+              <h5 class="card-title mt-3">Médicos</h5>
+              <p class="card-text">Aquí puedes ver todos nuestros especialistas</p>
+              <a href="./src/view/dashboards/dashboardMedico.html" class="btn btn-primary">IR →</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-12 mb-4">
+          <div class="card shadow-sm border">
+            <div class="card-body text-center">
+              <i class="bi bi-capsule fs-3 text-primary"></i>
+              <h5 class="card-title mt-3">Medicamentos</h5>
+              <p class="card-text">Aquí puedes ver todos nuestros medicamentos</p>
+              <a href="./src/view/dashboards/dashboardMedicamento.html" class="btn btn-primary">IR →</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-12 mb-4">
+          <div class="card shadow-sm border">
+            <div class="card-body text-center">
+              <i class="bi bi-bug-fill fs-3 text-primary"></i>
+              <h5 class="card-title mt-3">Enfermedades</h5>
+              <p class="card-text">Aquí puedes registrar tus enfermedades</p>
+              <a href="./src/view/dashboards/dashboardEnfermedad.html" class="btn btn-primary">IR →</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-12 mb-4">
+          <div class="card shadow-sm border">
+            <div class="card-body text-center">
+              <i class="bi bi-heart-pulse-fill fs-3 text-primary"></i>
+              <h5 class="card-title mt-3">Signos vitales</h5>
+              <p class="card-text">Aquí puedes registrar tus signos vitales</p>
+              <a href="./src/view/dashboards/dashboardSignoVital.html" class="btn btn-primary">IR →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FORMULARIO PRUEBA -->
+    <!-- <section class="container my-5">
+      
       <div class="row justify-content-center">
-        <div class="col-8">
-          <h3 class="text-center">Registrate</h3>
-          <form class="shadow border rounded p-4">
+        <div class="col-12">
+          <section class="container my-4">
             <div class="row">
-              <div class="col-6">
-                <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">
-                    <i class="bi bi-person-circle"></i>
-                  </span>
-                  <input type="text" class="form-control" placeholder="Nombres del Paciente">
+                <div class="col-12 col-md-8">
+                    <h3 class="text-center">REGISTRATE YA</h3>
+                    <form class="p-5 border rounded shadow">
+                        <div class="row">
+                            <div class="col-6">
+                                <label class="form-label">Nombres</label>
+                                <input type="text" class="form-control" id="nombrepaciente">
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label">Fecha naciemiento</label>
+                                <input type="date" class="form-control" id="nacimientopaciente">
+                            </div>
+                        </div>
+                        <div class="row my-3">
+                            <div class="col-6">
+                                <label class="form-label">Ciudad</label>
+                                <input type="text" class="form-control" id="ciudadpaciente">
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" id="correopaciente">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <label class="form-label">Teléfono</label>
+                                <input type="number" class="form-control" id="telefonopaciente">
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label">IPS</label>
+                                <input type="text" class="form-control" id="ipspaciente">
+                            </div>
+                        </div>
+                        <div class="row my-3">
+                            <div class="col-6">
+                                <label class="form-label">Grupo de Ingresos</label>
+                                <select class="form-select" id="grupoingresopaciente">
+                                    <option selected>Selecciona una opción</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="C">C</option>
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label">Fecha de Afiliazión</label>
+                                <input type="date" class="form-control" id="afiliacionpaciente">
+                            </div>
+                        </div>
+                        <div class="row my-3">
+                            <div class="form-check form-switch ms-2">
+                                <input class="form-check-input" type="checkbox" role="switch" id="polizapaciente">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">¿Tiene póliza?</label>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary w-100" type="submit" id="botonregistropaciente">Registrar</button>
+                    </form>
                 </div>
-              </div>
-              <div class="col-6">
-                <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">
-                    <i class="bi bi-person-vcard"></i>
-                  </span>
-                  <input type="text" class="form-control" placeholder="Identificacion del Paciente">
+            </div>
+        </section>
+      </div>
+    </section> -->
+    <!-- FORMULARIO REAL -->
+    <section class="container my-5" id="formPaciente">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+          <div class="card shadow-lg border-0">
+            <div class="card-header bg-primary text-white text-center py-4">
+              <h3 class="mb-0"><i class="bi bi-person-plus-fill me-2"></i>REGÍSTRATE YA</h3>
+            </div>
+            <div class="card-body bg-light">
+              <form class="p-4">
+                <div class="row">
+                  <div class="mb-3 col-6">
+                    <label class="form-label"><i class="bi bi-person me-2"></i>Nombres</label>
+                    <input type="text" class="form-control" id="nombrepaciente" placeholder="Ingrese sus nombres">
+                  </div>
+                  <div class="mb-3 col-6">
+                    <label class="form-label"><i class="bi bi-calendar-event me-2"></i>Fecha de nacimiento</label>
+                    <input type="date" class="form-control" id="nacimientopaciente">
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-6">
-                <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">
-                    <i class="bi bi-envelope"></i>
-                  </span>
-                  <input type="text" class="form-control" placeholder="Correo electrónico">
+                <div class="row">
+                  <div class="mb-3 col-6">
+                    <label class="form-label"><i class="bi bi-geo-alt me-2"></i>Ciudad</label>
+                    <input type="text" class="form-control" id="ciudadpaciente" placeholder="Ingrese su ciudad">
+                  </div>
+                  <div class="mb-3 col-6">
+                    <label class="form-label"><i class="bi bi-envelope me-2"></i>Correo electrónico</label>
+                    <input type="email" class="form-control" id="correopaciente" placeholder="ejemplo@correo.com">
+                  </div>
                 </div>
-              </div>
-              <div class="col-6">
-                <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">
-                  <i class="bi bi-telephone"></i>
-                </span>
-                <input type="text" class="form-control" placeholder="Teléfono">
-              </div>
-            </div>
-            </div>
-            <div class="row">
-          <div class="col-4">
-            <div class="input-group mb-3">
-              <span class="input-group-text" id="basic-addon1">
-                <i class="bi bi-activity"></i>
-              </span>
-              <input type="text" class="form-control" placeholder="RH">
+                <div class="row">
+                  <div class="mb-3 col-6">
+                    <label class="form-label"><i class="bi bi-telephone me-2"></i>Teléfono</label>
+                    <input type="tel" class="form-control" id="telefonopaciente" placeholder="Ingrese su teléfono">
+                  </div>
+                  <div class="mb-3 col-6">
+                    <label class="form-label"><i class="bi bi-hospital me-2"></i>IPS</label>
+                    <input type="text" class="form-control" id="ipspaciente" placeholder="Ingrese su IPS">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="mb-3 col-6">
+                    <label class="form-label"><i class="bi bi-cash-coin me-2"></i>Grupo de Ingresos</label>
+                    <select class="form-select" id="grupoingresopaciente">
+                      <option selected>Selecciona una opción</option>
+                      <option value="A">A</option>
+                      <option value="B">B</option>
+                      <option value="C">C</option>
+                    </select>
+                  </div>
+                  <div class="mb-3 col-6">
+                    <label class="form-label"><i class="bi bi-calendar-check me-2"></i>Fecha de Afiliación</label>
+                    <input type="date" class="form-control" id="afiliacionpaciente">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="mb-3 form-check form-switch col-12">
+                    <input class="form-check-input" type="checkbox" role="switch" id="polizapaciente">
+                    <label class="form-check-label" for="polizapaciente"><i class="bi bi-shield-check me-2"></i>¿Tiene
+                      póliza?</label>
+                  </div>
+                </div>
+                <button class="btn btn-primary w-100" type="submit" id="botonregistropaciente">
+                  <i class="bi bi-check-circle me-2"></i>Registrar
+                </button>
+              </form>
             </div>
           </div>
-          <div class="col-4">
-            <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">
-              <i class="bi bi-calendar-date"></i>
-            </span>
-            <input type="text" class="form-control" placeholder="Edad del Paciente">
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">
-              <i class="bi bi-shift-fill"></i>
-            </span>
-            <input type="text" class="form-control" placeholder="Peso">
-            </div>
-          </div>
-            </div>
-            <div class="row">
-              <div class="col-4">
-                <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">
-                    <i class="bi bi-sort-numeric-up"></i>
-                  </span>
-                  <input type="text" class="form-control" placeholder="Estatura">
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">
-                  <i class="bi bi-hospital"></i>
-                </span>
-                <input type="text" class="form-control" placeholder="IPS">
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">
-                  <i class="bi bi-arrow-through-heart-fill"></i>
-                </span>
-                <input type="text" class="form-control" placeholder="Estado Civil">
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-6">
-                <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">
-                    <i class="bi bi-sign-intersection-side"></i>
-                  </span>
-                  <input type="text" class="form-control" placeholder="Dirección">
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">
-                    <i class="bi bi-map"></i>
-                  </span>
-                  <input type="text" class="form-control" placeholder="Ciudad">
-                </div>
-              </div>
-            </div>
-        <button class="btn btn-primary mx-auto d-block" type="submit">Enviar</button>
-        </form>
+        </div>
       </div>
     </section>
   </main>
-  <footer>
-
+  <!-- Footer -->
+  <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
+    <img class="footer-logo" src="./assets/img/logotipo.png" alt="Logo">
+    <p class="footer-texto text-center text-white">"Salud anticipada, bienestar asegurado." </p>
+    <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
+      <a href="https://x.com/kuprax" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-twitter"></i>
+      </a>
+      <a href="https://github.com/angeltamayoz" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-linkedin"></i>
+      </a>
+      <a href="https://www.instagram.com/angel_tamayo_z/" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-instagram"></i>
+      </a>
+      <a href="mailto:angeltamayo@micorreo.com" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-envelope"></i>
+      </a>
+    </div>
+    <div class="derechos-de-autor text-center">
+      Creado por:
+      <div class="d-flex flex-wrap justify-content-center mt-2">
+        <span class="mx-2">Valentina Galeano</span>
+        <span class="mx-2">Angel Tamayo</span>
+        <span class="mx-2">Julieta Grisales</span>
+        <span class="mx-2">Carlos Cano</span>
+      </div>
+      <br> (2024) &#169;
+    </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+  <script src="./src/controllers/Formularios/controladorpacienteformulario.js" type="module"></script>
 </body>
 
 </html>
