@@ -8,13 +8,19 @@
     <title>Medicamento</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="../../assets/styles/estilos.css">
+    <link rel="stylesheet" href="../../assets/styles/estilosView.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg menu navbar-dark">
+        <nav class="navbar navbar-expand-lg menu navbar-dark fixed-top">
             <div class="container-fluid">
-                <img src="../../assets/img/logotipo.png" alt="logo" width="60" height="60">
+                <a class="navbar-brand" href="#">
+                    <img src="../../assets/img/logotipo.png" alt="logo" width="45" height="45">
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -23,45 +29,137 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link active" aria-current="page" href="../../index.html">Inicio</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                Dropdown
+                                Gestión
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./src/view/paciente.html">Paciente</a></li>
-                                <li><a class="dropdown-item" href="./src/view/medico.html">Medico</a></li>
-                                <li><a class="dropdown-item" href="./src/view/enfermedad.html">Enfermedad</a></li>
-                                <li><a class="dropdown-item" href="./src/view/medicamento.html">Medicamento</a></li>
-                                <li><a class="dropdown-item" href="./src/view/signovital.html">Signo Vital</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="../../src/view/paciente.html">Paciente</a></li>
+                                <li><a class="dropdown-item" href="../../src/view/medico.html">Médico</a></li>
+                                <li><a class="dropdown-item" href="../../src/view/enfermedad.html">Enfermedad</a></li>
+                                <li><a class="dropdown-item" href="../../src/view/medicamento.html">Medicamento</a></li>
+                                <li><a class="dropdown-item" href="../../src/view/signovital.html">Signo Vital</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dashboard
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../../src/view/dashboards/dashboardPaciente.html">DB
+                                        - Paciente</a></li>
+                                <li><a class="dropdown-item" href="../../src/view/dashboards/dashboardMedico.html">DB -
+                                        Médico</a></li>
+                                <li><a class="dropdown-item"
+                                        href="../../src/view/dashboards/dashboardEnfermedad.html">DB - Enfermedad</a>
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="../../src/view/dashboards/dashboardMedicamento.html">DB - Medicamento</a>
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="../../src/view/dashboards/dashboardSignoVital.html">DB - Signo Vital</a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        <section class="container my-4">
+        <!-- Banner -->
+        <section class="bannerMedicamento mt-5">
             <div class="row">
-                <div class="col-12 col-md-8">
-                    <h3>Registro de Medicamento</h3>
+                <div class="col-12">
+                    <div>
+                        <h1 class="display-4 text-white fw-bold animate__animated animate__fadeIn">Medicamentos</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container justify-content-center">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center mt-5">
+                    <a href="#formularioMedicamento" class="btn btn-primary btnIrSignoVital fw-bold p-2">Registrar</a>
+                </div>
+            </div>
+        </section>
+        <!-- Información general -->
+        <section class="container my-5">
+            <h2 class="text-center fw-bold text-primary animate__animated animate__heartBeat">¡Conoce más sobre el uso
+                adecuado de los medicamentos!</h2>
+            <hr>
+            <div class="row justify-content-center mt-4">
+                <div class="col-12 col-md-5 mb-3">
+                    <div class="card shadow p-3 animate__animated animate__zoomInLeft">
+                        <p>El manejo adecuado de medicamentos garantiza un tratamiento seguro y efectivo.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 mb-3">
+                    <div class="card shadow p-3 animate__animated animate__zoomInRight">
+                        <p>En SURATECH, promovemos el uso racional de medicamentos para evitar efectos adversos.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 mb-3">
+                    <div class="card shadow p-3 animate__animated animate__zoomInLeft">
+                        <p>Consulta siempre a tu médico antes de iniciar o cambiar un tratamiento.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 mb-3">
+                    <div class="card shadow p-3 animate__animated animate__zoomInRight">
+                        <p>El seguimiento adecuado de medicamentos mejora la calidad de vida de los pacientes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sección colapsable para más información -->
+        <section class="my-5 seccionColapsableMedicamentos">
+            <div class="container mt-3">
+                <h2 class="text-center">Detalles Adicionales</h2>
+                <div class="accordion" id="infoAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#info1">
+                                ¿Qué son los medicamentos?
+                            </button>
+                        </h2>
+                        <div id="info1" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                Los medicamentos son sustancias utilizadas para prevenir, tratar o aliviar enfermedades.
+                                Incluyen analgésicos, antibióticos, vacunas y más.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#info2">
+                                Importancia del registro
+                            </button>
+                        </h2>
+                        <div id="info2" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                Mantener un registro actualizado de medicamentos ayuda a evitar interacciones
+                                peligrosas y garantiza que los pacientes reciban el tratamiento correcto.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Formulario -->
+        <section class="container-fluid my-4">
+            <div class="row justify-content-center p-5" id="formularioMedicamento">
+                <div class="col-12 col-md-5 formularioImgMedicamento d-flex justify-content-center align-items-center">
+                    <img src="../../assets/img/medicamento1Medicamento.jpg" class="shadow rounded mx-auto" width="500px" alt="medicamentos">
+                </div>
+                <div class="col-12 col-md-7">
+                    <h3 class="suratechTitulo">Registro de Medicamento</h3>
                     <form class="p-5 border rounded shadow">
                         <div class="row">
                             <div class="col-6">
@@ -113,6 +211,37 @@
             </div>
         </section>
     </main>
+    <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
+        <img class="footer-logo" src="../../assets/img/logotipo.png" alt="Logo">
+        <p class="footer-texto text-center text-white">"Salud anticipada, bienestar asegurado." </p>
+        <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
+            <a href="https://x.com/kuprax" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-twitter-x"></i>
+            </a>
+            <a href="https://github.com/angeltamayoz" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/angel_tamayo_z/" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-instagram"></i>
+            </a>
+            <a href="mailto:angeltamayo@micorreo.com" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-envelope"></i>
+            </a>
+        </div>
+        <div class="derechos-de-autor text-center">
+            Creado por:
+            <div class="d-flex flex-wrap justify-content-center mt-2">
+                <span class="mx-2">Valentina Galeano</span>
+                <span class="mx-2">Angel Tamayo</span>
+                <span class="mx-2">Julieta Grisales</span>
+                <span class="mx-2">Carlos Cano</span>
+            </div>
+            <br> (2024) &#169;
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

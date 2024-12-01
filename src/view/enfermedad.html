@@ -1,55 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enfermedad</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="../../assets/styles/estilos.css">
+    <link rel="stylesheet" href="../../assets/styles/estilosView.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
+
 <body>
-    <section class="container my-4">
-        <div class="row">
-            <div class="col-12 col-md-8">
-                <h3>Registro de Enfermedad</h3>
-                <form class="p-5 border rounded shadow">
-                    <div class="row">
-                        <div class="col-6">
-                            <label class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="nombreenfermedad">
-                        </div>
-                        <div class="col-6">
-                            <label class="form-label">Síntomas</label>
-                            <input type="text" class="form-control" id="sintomasenfermedad">
-                        </div>
-                    </div>
-                    <div class="row my-3">
-                        <div class="col-6">
-                            <label class="form-label">Clasificación</label>
-                            <input type="text" class="form-control" id="clasificacionenfermedad">
-                        </div>
-                        <div class="col-6">
-                            <label class="form-label">Grado</label>
-                            <select class="form-select" aria-label="Default select example" id="gradoenfermedad">
-                                <option selected>Selecciona una opción</option>
-                                <option value="1">Uno</option>
-                                <option value="2">Dos</option>
-                                <option value="3">Tres</option>
-                              </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <label class="form-label">Probabilidad de vida</label>
-                            <input type="text" class="form-control" id="probabilidadvidaenfermedad">
-                        </div>
-                    </div>
-                    <button class="btn btn-primary w-100 mt-3" type="submit" id="botonregistroenfermedad">Registrar</button>
-                </form>
+    <header>
+        <nav class="navbar navbar-expand-lg menu navbar-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../../assets/img/logotipo.png" alt="logo" width="45" height="45">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Gestión
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../../src/view/paciente.html">Paciente</a></li>
+                                <li><a class="dropdown-item" href="../../src/view/medico.html">Médico</a></li>
+                                <li><a class="dropdown-item" href="../../src/view/enfermedad.html">Enfermedad</a></li>
+                                <li><a class="dropdown-item" href="../../src/view/medicamento.html">Medicamento</a></li>
+                                <li><a class="dropdown-item" href="../../src/view/signovital.html">Signo Vital</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dashboard
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../../src/view/dashboards/dashboardPaciente.html">DB
+                                        -
+                                        Paciente</a></li>
+                                <li><a class="dropdown-item" href="../../src/view/dashboards/dashboardMedico.html">DB -
+                                        Médico</a></li>
+                                <li><a class="dropdown-item"
+                                        href="../../src/view/dashboards/dashboardEnfermedad.html">DB -
+                                        Enfermedad</a></li>
+                                <li><a class="dropdown-item"
+                                        href="../../src/view/dashboards/dashboardMedicamento.html">DB -
+                                        Medicamento</a></li>
+                                <li><a class="dropdown-item"
+                                        href="../../src/view/dashboards/dashboardSignoVital.html">DB -
+                                        Signo Vital</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </section>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="../controllers/Formularios/controladorenfermedadformulario.js" type="module"></script>
+        </nav>
+    </header>
+    <main>
+        <!-- Banner -->
+        <section class="bannerEnfermedades mt-5">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="display-4 text-white fw-bold animate__animated animate__fadeIn">Enfermedades
+                    </h1>
+                </div>
+            </div>
+        </section>
+        <section class="container justify-content-center">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center mt-5">
+                    <a href="#formularioEnfermedad" class="btn btn-primary btnIrEnfermedad fw-bold p-2">Registrar</a>
+                </div>
+            </div>
+        </section>
+        <!-- Información general -->
+        <section class="container my-5">
+            <h2 class="text-center fw-bold text-primary animate__animated animate__heartBeat">
+                ¡Gestiona y Registra Información Relevante sobre Enfermedades!
+            </h2>
+            <hr>
+            <div class="row justify-content-center mt-4">
+                <div class="col-12 col-md-5 mb-3">
+                    <div class="card shadow p-3 animate__animated animate__zoomInLeft">
+                        <p>Registrar información sobre enfermedades permite un mejor control y seguimiento de la salud
+                            de los pacientes.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 mb-3">
+                    <div class="card shadow p-3 animate__animated animate__zoomInRight">
+                        <p>Facilita la personalización de tratamientos y la detección de patrones epidemiológicos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sección colapsable -->
+        <section class="my-5">
+            <section class="container mt-3">
+                <h2 class="text-center">Detalles sobre Enfermedades</h2>
+                <div class="accordion" id="infoAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#info1">
+                                ¿Qué es el registro de enfermedades?
+                            </button>
+                        </h2>
+                        <div id="info1" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                El registro de enfermedades recopila información detallada sobre diagnósticos,
+                                tratamientos y evolución, permitiendo mejorar la atención médica y los estudios de salud
+                                pública.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- Formulario -->
+        <section class="container-fluid my-4">
+            <div class="row justify-content-center p-5">
+                <div class="col-12 col-md-6" id="formularioEnfermedad">
+                    <h3 class="suratechTitulo">Registro de Enfermedad</h3>
+                    <form class="p-5 border rounded shadow">
+                        <div class="row">
+                            <div class="col-6">
+                                <label class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombreenfermedad">
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label">Síntomas</label>
+                                <input type="text" class="form-control" id="sintomasenfermedad">
+                            </div>
+                        </div>
+                        <div class="row my-3">
+                            <div class="col-6">
+                                <label class="form-label">Clasificación</label>
+                                <input type="text" class="form-control" id="clasificacionenfermedad">
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label">Grado</label>
+                                <select class="form-select" aria-label="Default select example" id="gradoenfermedad">
+                                    <option selected>Selecciona una opción</option>
+                                    <option value="1">Uno</option>
+                                    <option value="2">Dos</option>
+                                    <option value="3">Tres</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <label class="form-label">Probabilidad de vida</label>
+                                <input type="text" class="form-control" id="probabilidadvidaenfermedad">
+                            </div>
+                        </div>
+                        <button class="btn btn-primary w-100 mt-3" type="submit"
+                            id="botonregistroenfermedad">Registrar</button>
+                    </form>
+                </div>
+                <div class="col-12 col-md-5 d-flex justify-content-center align-items-center formularioImgEnf">
+                    <img src="../../assets/img/enfermedad1Enfermedad.webp" class="shadow rounded" width="500px"
+                        alt="enfermedad1">
+                </div>
+            </div>
+        </section>
+        <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
+            <img class="footer-logo" src="../../assets/img/logotipo.png" alt="Logo">
+            <p class="footer-texto text-center text-white">"Salud anticipada, bienestar asegurado." </p>
+            <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
+                <a href="https://x.com/kuprax" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-twitter-x"></i>
+                </a>
+                <a href="https://github.com/angeltamayoz" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/angel_tamayo_z/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="mailto:angeltamayo@micorreo.com" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-envelope"></i>
+                </a>
+            </div>
+            <div class="derechos-de-autor text-center">
+                Creado por:
+                <div class="d-flex flex-wrap justify-content-center mt-2">
+                    <span class="mx-2">Valentina Galeano</span>
+                    <span class="mx-2">Angel Tamayo</span>
+                    <span class="mx-2">Julieta Grisales</span>
+                    <span class="mx-2">Carlos Cano</span>
+                </div>
+                <br> (2024) &#169;
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script src="../controllers/Formularios/controladorenfermedadformulario.js" type="module"></script>
 </body>
+
 </html>

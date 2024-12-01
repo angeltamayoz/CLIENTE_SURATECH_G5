@@ -53,15 +53,15 @@ buscarEnfermedad()
       let grado = document.createElement("p");
       grado.textContent = enfermedad.grado;
 
-      let probabilidadVida = document.createElement("p");
-      probabilidadVida.textContent = enfermedad.probabilidadVida;
+      let probabiliadVida = document.createElement("p");
+      probabiliadVida.textContent = enfermedad.probabiliadVida;
 
       tarjeta.appendChild(nombre);
       tarjeta.appendChild(id);
       tarjeta.appendChild(sintomas);
       tarjeta.appendChild(clasificacion);
       tarjeta.appendChild(grado);
-      tarjeta.appendChild(probabilidadVida);
+      tarjeta.appendChild(probabiliadVida);
       columna.appendChild(tarjeta);
       fila.appendChild(columna);
 
@@ -75,7 +75,7 @@ buscarEnfermedad()
             <p><strong>Síntomas:</strong> ${enfermedad.sintomas}</p>
             <p><strong>Clasificación:</strong> ${enfermedad.clasificacion}</p>
             <p><strong>Grado:</strong> ${enfermedad.grado}</p>
-            <p><strong>Probabilidad de vida:</strong> ${enfermedad.probabilidadVida}</p>
+            <p><strong>Probabilidad de vida:</strong> ${enfermedad.probabiliadVida}</p>
           </div>
         `;
 
@@ -124,7 +124,7 @@ buscarEnfermedad()
         enfermedad.sintomas,
         enfermedad.clasificacion,
         enfermedad.grado,
-        enfermedad.probabilidadVida
+        enfermedad.probabiliadVida
       ];
 
       celdas.forEach(function (celda) {

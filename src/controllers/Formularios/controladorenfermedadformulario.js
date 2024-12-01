@@ -4,7 +4,7 @@ let nombreEnfermedad = document.getElementById("nombreenfermedad")
 let sintomasEnfermedad = document.getElementById("sintomasenfermedad")
 let clasificacionEnfermedad = document.getElementById("clasificacionenfermedad")
 let gradoenfErmedad = document.getElementById("gradoenfermedad")
-let probabilidadvidaEnfermedad = document.getElementById("probabilidadvidaenfermedad")
+let probabiliadVidaEnfermedad = document.getElementById("probabilidadvidaenfermedad")
 
 let botonRegistroEnfermedad = document.getElementById("botonregistroenfermedad")
 
@@ -15,7 +15,7 @@ botonRegistroEnfermedad.addEventListener("click", function(evento){
         sintomas: sintomasEnfermedad.value,
         clasificacion: clasificacionEnfermedad.value,
         grado: gradoenfErmedad.value,
-        probabiliadVida: probabilidadvidaEnfermedad.value
+        probabiliadVida: probabiliadVidaEnfermedad.value
         }
 
         registrarEnfermedad(datosFormularioEnfermedad)

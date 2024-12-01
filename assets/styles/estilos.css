@@ -165,3 +165,13 @@ footer {
     color: #aeaeae;
     padding: 20px;
 }
+
+/* Sección 3 */
+.seccion3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #ece9e9;
+    margin-bottom: 30px;
+}

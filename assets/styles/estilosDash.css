@@ -2,10 +2,9 @@ body {
     background-color: #f8f9fc;
 }
 
-/* SIDEBAR */
+/* sidebar */
 .sidebar {
     background-color: #0033A0;
-    min-height: 100vh;
     color: white;
 }
 .sidebar .nav-link {
@@ -15,7 +14,7 @@ body {
     color: white;
 }
 
-.botonesSidebar:hover {
+.botonessidebar:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Añade una transición de color y sombra */
 }

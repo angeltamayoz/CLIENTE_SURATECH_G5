@@ -1,0 +1,232 @@
+/* PACIENTE */
+/* Banner */
+.bannerPaciente{
+    background-image: url("../img/paciente1Pacientes.jpg");
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 8%;
+    position: relative;
+    z-index: 1;
+}
+
+.bannerPaciente::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    top:0;
+    left:0;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.formularioDelPaciente {
+    background-image: url("../img/pacienteFormularioPacientes.jpg");
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 8%;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.formularioDelPaciente::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    top:0;
+    left:0;
+    opacity: 0.2; /* Modificado de 0.4 a 0.2 */
+    z-index: -1;
+}
+
+/* Noticias */
+.noticias {
+    background-color: #064de6 !important;
+}
+
+/* MEDICO */
+.bannerMedico{
+    background-image: url("../img/medico2Medico.webp");
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 8%;
+    position: relative;
+    z-index: 1;
+}
+
+.bannerMedico::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    top:0;
+    left:0;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.seccion1 {
+    background-color: rgb(230, 229, 229);
+    height: 300px;
+}
+
+.seccion1 {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.seccion1 .card {
+    background-color: #f0f8ff;
+    border: none;
+}
+
+.seccion1 .btn-primary {
+    background-color: #00509e;
+    border: none;
+}
+
+/* Formularios */
+
+form {
+    background-color: #e3f2fd;
+}
+
+.form-control {
+    border-radius: 10px;
+    border: 1px solid #00509e;
+}
+
+.btn-primary {
+    background-color: #00509e;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #003366;
+}
+
+h3 {
+    color: #003366;
+}
+
+label {
+    font-weight: bold;
+}
+
+.formPaciente {
+    background-color: #e3f2fd;
+}
+
+/* SIGNOS VITALES */
+.bannerSignoVital{
+    background-image: url("../img/signoVitalBannerSignoVital.jpeg");
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 8%;
+    position: relative;
+    z-index: 1;
+}
+
+.bannerSignoVital::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    top:0;
+    left:0;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.seccionColapsableSignosVitales {
+    background-color: #f0f8ff;
+    height: 200px;
+}
+
+.btnIrSignoVital {
+   font-size: 30px;
+}
+
+@media (max-width: 768px) {
+    .formularioImgSV img {
+        width: 300px;
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+}
+
+
+
+/* ENFERMEDADES */
+.bannerEnfermedades{
+    background-image: url("../img/enfermedadBannerEnfermedad.webp");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 8%;
+    position: relative;
+    z-index: 1;
+}
+
+.bannerEnfermedades::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    top:0;
+    left:0;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.btnIrEnfermedad {
+    font-size: 30px;
+}
+
+@media (max-width: 768px) {
+    .formularioImgEnf img {
+        width: 300px;
+        margin-top: 20px;
+    }
+}
+
+/* MEDICAMENTO */
+.bannerMedicamento {
+    background-image: url("../img/medicamentoBannerMedicamento.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 8%;
+    position: relative;
+    z-index: 1;
+}
+
+.bannerMedicamento::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    top:0;
+    left:0;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+@media (max-width: 768px) {
+    .formularioImgMedicamento img {
+        width: 300px;
+        margin-bottom: 20px;
+    }
+}
