@@ -23,9 +23,15 @@ botonRegistroEnfermedad.addEventListener("click", function(evento){
           console.log(respuestaBack);
           Swal.fire({
             title: "Registro Existoso!",
-            text: "Ya eres parte de nuestra gran familia!",
             icon: "success"
+          }).then(() => {
+            window.location.href = "../view/dashboards/dashboardEnfermedad.html";
           });
+          nombreEnfermedad.value = "",
+          sintomasEnfermedad.value = "",
+          clasificacionEnfermedad.value = "",
+          gradoenfErmedad.value = "",
+          probabiliadVidaEnfermedad.value = ""
         });
         console.log(datosFormularioEnfermedad);
 })

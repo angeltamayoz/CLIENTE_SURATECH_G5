@@ -29,9 +29,17 @@ botonRegistroMedicamento.addEventListener("click", function(evento){
           console.log(respuestaBack);
           Swal.fire({
             title: "Registro Existoso!",
-            text: "Ya eres parte de nuestra gran familia!",
             icon: "success"
+          }).then(() => {
+            window.location.href = "../view/dashboards/dashboardMedicamento.html";
           });
+          nombreMedicamento.value = "",
+          presentacionMedicamento.value = "",
+          dosisMedicamento.value = "",
+          laboratiorioMedicamento.value = "",
+          caducidadMedicamento.value = "",
+          contraindicacionesMedicamento.value = "",
+          registroMedicamento.value = ""
         });
         console.log(datosFormularioMedicamento);
 })

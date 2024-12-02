@@ -38,9 +38,19 @@ botonRegistroPaciente.addEventListener("click", function(evento){
           console.log(respuestaBack);
           Swal.fire({
             title: "Registro Existoso!",
-            text: "Ya eres parte de nuestra gran familia!",
+            text: "¡Ya eres parte de nuestra gran familia!",
             icon: "success"
+          }).then(() => {
+            window.location.href = "../view/dashboards/dashboardPaciente.html";
           });
+          nombrePaciente.value = "",
+          nacimientoPaciente.value = "",
+          ciudadPaciente.value = "",
+          correoPaciente.value = "",
+          telefonoPaciente.value = "",
+          ipsPaciente.value = "",
+          afiliacionPaciente.value = "",
+          grupoIngresoPaciente.value = ""
         });
         console.log(datosFormularioPaciente);
 })

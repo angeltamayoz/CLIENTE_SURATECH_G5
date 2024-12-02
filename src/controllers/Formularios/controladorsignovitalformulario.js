@@ -19,9 +19,14 @@ botonRegistroSignoVital.addEventListener("click", function(evento){
           console.log(respuestaBack);
           Swal.fire({
             title: "Registro Existoso!",
-            text: "Ya eres parte de nuestra gran familia!",
+            text: "¡Sigue cuidando tu salud!",
             icon: "success"
+          }).then(() => {
+            window.location.href = "../view/dashboards/dashboardSignoVital.html";
           });
+          fechaSignoVital.value = '';
+          nombreSignoVital.value = '';
+          valorSignoVital.value = '';
         });
         console.log(datosFormularioSignoVital);
 })
