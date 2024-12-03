@@ -110,7 +110,7 @@
 
 /* Sección 2 */
 .tarjetasSec2 {
-    border-radius: 50px;
+    border-radius: 30px;
 }
 
 /* Footer */
@@ -174,4 +174,35 @@ footer {
     padding: 20px;
     background-color: #ece9e9;
     margin-bottom: 30px;
+}
+
+/* Formulario */
+form {
+    background-color: #e3f2fd;
+}
+
+.form-control {
+    border-radius: 10px;
+    border: 1px solid #00509e;
+}
+
+.btn-primary {
+    background-color: #00509e;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #003366;
+}
+
+h3 {
+    color: #003366;
+}
+
+label {
+    font-weight: bold;
+}
+
+.formPaciente {
+    background-color: #e3f2fd;
 }
